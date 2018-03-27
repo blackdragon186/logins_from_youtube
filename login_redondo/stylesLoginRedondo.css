@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/bg.jpg");
+    background-image: 100% 100%;
+}
+
+#main {
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#title{
+    font-family: calibri;
+    font-size: 30px;
+    color: #222;
+    text-align: center;
+}
+
+hr{
+    margin: 5px auto;
+    padding: 0px;
+}
