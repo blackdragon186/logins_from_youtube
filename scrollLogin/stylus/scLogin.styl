@@ -1,0 +1,72 @@
+@charset "UTF-8"
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower')
+
+body
+    margin: 0px
+    padding: 0px
+    background-color: turquoise
+    font-family: 'Indie Flower', cursive
+
+.box
+    height: 200px
+    width: 1000px
+    background-color: #2d2d2d
+    border-radius: 5px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.main
+    height: 400px
+    width: 450px
+    background-color: #ffffff
+    border-radius: 5px
+    position: absolute
+    top: 50%
+    left: 70%
+    transform: translate(-50%, -50%)
+    z-index: 99
+
+.logFrm, .sign_up_frm
+    position: absolute
+    top: 50%
+    left: 70%
+    transform: translate(-50%, -50%)
+    z-index: 999
+
+/*.sign_up_frm
+    top: 45%
+    left: 75%
+    /*visibility: hidden*/
+
+.logFrm h1, .sign_up_frm h2
+    font-size: 35px
+    color: turquoise
+
+.logFrm input, .sign_up_frm input
+    height: 40px
+    width: 300px
+    border: 0px
+    outline: none 
+    border-bottom: 1px solid black
+    margin: 5px 
+
+.logFrm button, .sign_up_frm button
+    height: 35px
+    width: 130px
+    background-color: turquoise 
+    font-family: monospace
+    font-size: 16px
+    color: #ffffff
+    border: none 
+    outline: none 
+    border-radius: 5px
+    margin-top: 30px
+    margin-left: 175px
+
+.logFrm #btn_env
+    &:hover
+        background-color: #009b9b
+        cursor: pointer
+
