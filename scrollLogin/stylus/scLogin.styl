@@ -1,72 +1,182 @@
-@charset "UTF-8"
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower')
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css?family=Indie+Flower|Lobster";
 
-body
-    margin: 0px
-    padding: 0px
-    background-color: turquoise
-    font-family: 'Indie Flower', cursive
+$color_1: turquoise
+$color_2: white
+$color_3: #2d2d2d
+$font_family_1: 'Indie Flower', cursive
+$font_family_2: monospace
+$font_family_3: 'Lobster', cursive, arial
+$background_color_1: turquoise
+$background_color_2: #2D2D2D
+$background_color_3: white
+$background_color_4: transparent
+$background_color_5: #009b9b
 
-.box
-    height: 200px
-    width: 1000px
-    background-color: #2d2d2d
-    border-radius: 5px
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+/**
+ * @description CSS que contiene los estilos que se
+ *              aplican a la página index.html
+ * 
+ * @author Ing. Moises M.G.
+ * @version 1.0.0
+ * @since 27/03/2018
+ * @see index.html, scLogin.js
+ */
+body 
+	margin: 0px
+	padding: 0px
+	background-color: $background_color_1
+	font-family: $font_family_1
 
-.main
-    height: 400px
-    width: 450px
-    background-color: #ffffff
-    border-radius: 5px
-    position: absolute
-    top: 50%
-    left: 70%
-    transform: translate(-50%, -50%)
-    z-index: 99
+#main_box 
+	height: 200px
+	width: 1000px
+	background-color: $background_color_2
+	border-radius: 5px
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
 
-.logFrm, .sign_up_frm
-    position: absolute
-    top: 50%
-    left: 70%
-    transform: translate(-50%, -50%)
-    z-index: 999
+#main 
+	height: 400px
+	width: 450px
+	background-color: $background_color_3
+	border-radius: 5px
+	position: absolute
+	top: 50%
+	left: 70%
+	transform: translate(-50%, -50%)
+	z-index: 99
 
-/*.sign_up_frm
-    top: 45%
-    left: 75%
-    /*visibility: hidden*/
+#loginform 
+	position: absolute
+	top: 50%
+	left: 70%
+	transform: translate(-50%, -50%)
+	z-index: 999
+	h1 
+		font-size: 45px
+		color: $color_1
+	
+	input 
+		height: 40px
+		width: 300px
+		border: 0px
+		outline: none
+		border-bottom: 1px solid black
+		margin: 5px
+	
+	button 
+		height: 35px
+		width: 130px
+		background-color: $background_color_1
+		font-family: $font_family_2
+		font-size: 16px
+		color: $color_2
+		border: none
+		outline: none
+		border-radius: 5px
+		margin-top: 30px
+		margin-left: 175px
+		&:hover 
+			background-color: $background_color_5
+			cursor: pointer
+		
+#signupform 
+	position: absolute
+	top: 50%
+	left: 70%
+	transform: translate(-50%, -50%)
+	z-index: 999
+	top: 45%
+	left: 75%
+	visibility: hidden
+	h2 
+		font-size: 45px
+		color: $color_1
+	input 
+		height: 40px
+		width: 300px
+		border: 0px
+		outline: none
+		border-bottom: 1px solid black
+		margin: 5px
+	button 
+		height: 35px
+		width: 130px
+		background-color: $background_color_1
+		font-family: $font_family_2
+		font-size: 16px
+		color: $color_2
+		border: none;
+		outline: none;
+		border-radius: 5px
+		margin-top: 30px
+		margin-left: 175px
+		&:hover 
+			background-color: $background_color_5
+			cursor: pointer
 
-.logFrm h1, .sign_up_frm h2
-    font-size: 35px
-    color: turquoise
+#login_btn 
+	height: 35px
+	width: 120px
+	background-color: $background_color_4
+	color: $color_2
+	border: 1px solid white
+	border-radius: 5px
+	outline: none
+	position: absolute
+	left: 75%
+	top: 65%
+	transform: translate(-50%, -50%)
+	transition: all .5s
+	&:hover 
+		background-color: $background_color_3
+		color: $color_3
+		cursor: pointer
 
-.logFrm input, .sign_up_frm input
-    height: 40px
-    width: 300px
-    border: 0px
-    outline: none 
-    border-bottom: 1px solid black
-    margin: 5px 
+#signup_btn 
+	height: 35px
+	width: 120px
+	background-color: $background_color_4
+	color: $color_2
+	border: 1px solid white
+	border-radius: 5px
+	outline: none
+	position: absolute
+	left: 75%
+	top: 65%
+	transform: translate(-50%, -50%)
+	transition: all .5s
+	left: 25%
+	&:hover 
+		background-color: $background_color_3
+		color: $color_3
+		cursor: pointer
 
-.logFrm button, .sign_up_frm button
-    height: 35px
-    width: 130px
-    background-color: turquoise 
-    font-family: monospace
-    font-size: 16px
-    color: #ffffff
-    border: none 
-    outline: none 
-    border-radius: 5px
-    margin-top: 30px
-    margin-left: 175px
+#login_msg 
+	font-family: $font_family_3
+	font-size: 25px
+	color: $color_2
+	position: absolute
+	top: 35%
+	left: 75%
+	transform: translate(-50%, -50%)
+	z-index: 1
 
-.logFrm #btn_env
-    &:hover
-        background-color: #009b9b
-        cursor: pointer
+#signup_msg 
+	font-family: $font_family_3
+	font-size: 25px
+	color: $color_2
+	position: absolute
+	top: 35%
+	left: 75%
+	transform: translate(-50%, -50%)
+	z-index: 1
+	left: 25%
 
+.cabecera 
+	margin-top: 1%
+	margin-left: 25%
+	font-size: 55px
