@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--=====================================
+=            Moon Light Soft            =
+=========================================
+* NOTE: Página  web que muestra un botón 
+*	animado.
+*	
+* @author Ing. Moises M.G.
+* @version 1.0.0
+* @since 28/03/2018
+* @see css/main.css
+-->
+<!--=====================================-->
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Skewed Button</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+	<section>
+		<button class="btn-scroll" id="btn_algo" 
+			onclick="fncSaludo('this')">Push Me :)
+		</button>
+	</section>
+
+	<footer>
+		
+	</footer>
+</body>
+<script>
+	/**
+	 * [fncSaludo Muestra un saludo al usuario mediante un alert]
+	 * @param  {[type String]} strVal [Recibe una cadena de texto]
+	 * @return {[type void]}
+	 */
+	function fncSaludo(strVal){
+		alert("hola tu eres: " + strVal);
+	}
+</script>
+<script src=""></script>
+</html>

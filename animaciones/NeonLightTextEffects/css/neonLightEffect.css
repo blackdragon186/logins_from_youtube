@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Lobster');
+/*=============================================
+=  Estilos CSS para Neon_light_Effects.html   =
+===============================================
+*
+* NOTE: Hoja de estilos por medio de la cual se
+* 	crea un efecto de luz neón en un texto.
+*
+* @autor Ing. Moises Morales G.
+* @version 1.0.0
+* @since 28/03/2018
+* @see ../Neon_light_Effects.html
+* =============================================
+*/
+
+/****************
+ *     NOTE:	*
+ ********************************************************
+ *		Se quitan los márgenes pre establecidos			*
+ *			por cualquier navegador web.				*
+ *******************************************************/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/****************
+ *     NOTE:	*
+ ********************************************************
+ *		Propiedades aplicadas al cuerpo de la pág.		*
+ *******************************************************/
+body{
+	font-family: 'Indie Flower', cursive;
+	background: url("../img/bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/****************
+ *     NOTE:	*
+ ********************************************************
+ *		
+ *******************************************************/
+ .neon{
+ 	position: absolute;
+ 	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+ 	margin: 0;
+	padding: 0 20px;
+	font-size: 5em;
+	color: #ffffff;
+	text-shadow: 0 0 20px #ff005b;
+ }
+
+ /****************
+  *     NOTE:	*
+  ********************************************************
+  *		
+  *******************************************************/
+  .neon:after{
+  	content: attr(data-text);
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	padding: 0 20px;
+  	z-index: -1;
+  	color: #ff005b;
+  	filter: blur(15px);
+  }
+
+  .neon:before{
+  	content: '';
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	background: #fe3a80;
+  	z-index: -2;
+  	opacity: 0.5;
+  	filter: blur(40px);
+  }

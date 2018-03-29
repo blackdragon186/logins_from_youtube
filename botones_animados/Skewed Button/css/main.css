@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Lobster');
+/*=============================================
+=        Estilos CSS para btnScroll.html      =
+===============================================
+*
+* NOTE: Hoja de estilos por medio de la cual se
+* 	crea un efecto de tipo scroll en diagonal
+* 	en un botón.
+*
+* @autor Ing. Moises Morales G.
+* @version 1.0.0
+* @since 28/03/2018
+* @see btnScroll.html
+* =============================================
+*/
+
+/****************
+ *     NOTE:	*
+ ********************************************************
+ *		transform                                       *
+ * Especifica la transformación a realizar sobre        *
+ * el elemento. Se define como una lista separada por   *
+ * espacios de transformaciones que se aplican en orden *
+ * una después de la otra, tal y como es requerido por  *
+ * la operación de composición.                         *
+ *******************************************************/
+
+/****************
+ *     NOTE:	*
+ ********************************************************
+ *		Se quitan los márgenes pre establecidos			*
+ *			por cualquier navegador web.				*
+ *******************************************************/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/****************
+ *     NOTE:	*
+ ********************************************************
+ *		Propiedades aplicadas al cuerpo de la pág.		*
+ *******************************************************/
+body{
+	font-family: 'Indie Flower', cursive;
+	background-color: coral;
+}
+
+/****************
+ *     NOTE:	*
+ ********************************************************
+ * Clase que aplica la primer capa de estilos al botón, *
+ * quita la apariencia simple y lo vuelve visualmente   *
+ * mas atractivo para un usuario.                       *
+ ********************************************************/
+#btn_algo{
+	height: 40px;
+	width: 200px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border: 1px solid whitesmoke;
+	position: absolute;
+	/* Quitar top y left si se va a aplicar en donde *
+	 *no se requera un botón en el centro de la pág. */
+	/*top: 50%;
+	left: 50%;*/
+	/* con este fragmento se logra centrar bien en la pág. */
+	/*transform: translate(-50%, -50%);*/
+	border-radius: 3px;
+	font-family: fantasy;
+	font-size: 17px;
+	color: #2d2d2d;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.btn-scroll:before{
+	content: '';
+	height: 45px;
+	width: 0px;
+	background-color: whitesmoke;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) skewx(-25deg);
+	z-index: -1;
+	transition: all 0.4s;
+}
+
+.btn-scroll:hover:before{
+	width: 240px;
+}
