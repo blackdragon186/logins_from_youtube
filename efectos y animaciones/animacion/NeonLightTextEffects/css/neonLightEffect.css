@@ -40,7 +40,7 @@ body{
 /****************
  *     NOTE:	*
  ********************************************************
- *		
+ *		Primer capa de efecto de luz en el texto        *
  *******************************************************/
  .neon{
  	position: absolute;
@@ -57,7 +57,8 @@ body{
  /****************
   *     NOTE:	*
   ********************************************************
-  *		
+  *		Se crea y coloca una copia del texto detrás      *
+  *		                del  primero.
   *******************************************************/
   .neon:after{
   	content: attr(data-text);
@@ -70,6 +71,12 @@ body{
   	filter: blur(15px);
   }
 
+/****************
+ *     NOTE:	*
+ ********************************************************
+ *       Efecto de luminiscencia alrededor de           *
+ *                     las letras.                      *
+ *******************************************************/
   .neon:before{
   	content: '';
   	position: absolute;

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/*=============================================
+=  Estilos CSS para  loadingPage.html   =
+===============================================
+
+* NOTE: Hoja de estilos por medio de la cual se
+        crea una animación de carga tipo rombo.
+
+* @autor Ing. Moises Morales G.
+* @version 1.0.0
+* @since 01/04/2018
+* @see loadingPage.html
+* @see http://librosweb.es/referencia/css/
+* =============================================*/
+
+/****************
+*      NOTE     *
+********************************************************
+*         Se quitan los márgenes pre establecidos      *
+*              por cualquier navegador web.            *
+*******************************************************/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/****************
+*      NOTE     *
+********************************************************
+*       Crea un cuadrado en el centro de la pág.       *
+*       y lo rota de manera que forme un rombo.
+*******************************************************/
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 150px;
+    height: 150px;
+    border: 10px solid #262626;
+}
+
+/****************
+*      NOTE     *
+********************************************************
+*         Crea 9 cuadrados pequeños contenidos en      *
+*           en cuadrado grande
+*******************************************************/
+.cuadrosInternos{
+    width: 50px;
+    height: 50px;
+    background: #262626;
+    display: block;
+    float: left;
+    animation: animate 2s linear infinite;
+}
+
+/****************
+*      NOTE     *
+********************************************************
+*         Se dan diferentes tiempos de animación      *
+*              a los cuadrados pequeños.              *
+*******************************************************/
+.cuadrosInternos:nth-child(3){
+    animation-delay: 0.8s;
+}
+
+.cuadrosInternos:nth-child(2),
+.cuadrosInternos:nth-child(6){
+    animation-delay: 0.6s;
+}
+
+.cuadrosInternos:nth-child(1),
+.cuadrosInternos:nth-child(5),
+.cuadrosInternos:nth-child(9){
+    animation-delay: 0.4s;
+}
+
+.cuadrosInternos:nth-child(4),
+.cuadrosInternos:nth-child(8) {
+    animation-delay: 0.2s;
+}
+
+.cuadrosInternos:nth-child(7) {
+    animation-delay: 0s;
+}
+
+/****************
+*      NOTE     *
+********************************************************
+*         Fotogramas principales de la animación,      *
+*       se les da diferente escala a los cuadrados.    *
+*******************************************************/
+@keyframes animate{
+    0%{
+        transform: scale(1);
+    }
+     30% {
+         transform: scale(0);
+     }
+    50% {
+        transform: scale(0);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

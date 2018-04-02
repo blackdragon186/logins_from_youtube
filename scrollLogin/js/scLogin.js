@@ -6,6 +6,7 @@
  * @version 1.0.0
  * @since 27/03/2018
  * @see index.html, scLogin.css
+ * @see https://www.danstools.com/javascript-obfuscate/index.php
  */
 $(document).ready(function () {
 

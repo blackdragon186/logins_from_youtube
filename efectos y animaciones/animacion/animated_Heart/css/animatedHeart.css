@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/*=============================================
+=  Estilos CSS para   animated_heart.html   =
+===============================================
+
+* NOTE: Hoja de estilos por medio de la cual 
+    se crea un corazón animado.
+
+* @autor Ing. Moises Morales G.
+* @version 1.0.0
+* @since 29/03/2018
+* @see animated_heart.html
+* @see http://librosweb.es/referencia/css/
+* =============================================*/
+
+/****************
+*      NOTE     *
+********************************************************
+*         Se quitan los márgenes pre establecidos      *
+*              por cualquier navegador web.            *
+*******************************************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/** Color de fondo de toda  la página web. */
+body{
+    background-color: #3e0000;
+}
+
+/****************
+*      NOTE     *
+********************************************************
+*         Primera parte del corazon a dibujar          *
+*******************************************************/
+.heart{
+    width: 180px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    background: #ff3e3e;
+    transition: 1s;
+    transform-origin: right bottom;
+}
+/****************
+*      NOTE     *
+********************************************************
+*  Segunda parte del corazón me diante pseudo-clases   *
+*******************************************************/
+.heart:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: 2s;
+    transform-origin: right bottom;
+}
+
+/****************
+*      NOTE     *
+********************************************************
+*         sección que hace la animación                *
+*******************************************************/
+.heart:hover{
+    transform: rotate(45deg);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+}
+.heart:hover:before{
+    background: #e22c2c;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transform: rotate(450deg) translatey(100px);
+}

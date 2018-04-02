@@ -29,9 +29,10 @@
  * @author <p>Ing. Moises Morales Guzmán.</p>
  * @param none.
  * @version 1.0.0
- * @since 26/03/2018
- * @see <p> css/stylesLoginRedondos.css<br/> index.html</p>
+ * @since 26/03/2018.
+ * @see <p> css/stylesLoginRedondos.css<br/> index.html</p>.
  * @see http: //www.patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+ * @see https://www.danstools.com/javascript-obfuscate/index.php
  */
 $(document).ready(function () {
 

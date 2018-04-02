@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/*=============================================
+=  Estilos CSS para  Txt_CLip_Mask.html   =
+===============================================
+
+* NOTE: Hoja de estilos por medio de la cual se
+* crea un efecto de máscara de texto recortado.
+
+* NOTE: El efecto solo funciona el Chrome.
+
+* @autor Ing. Moises Morales G.
+* @version 1.0.0
+* @since //2018
+* @see Txt_CLip_Mask.html
+* @see http://librosweb.es/referencia/css/
+* =============================================*/
+
+/****************
+*      NOTE     *
+********************************************************
+*         Se quitan los márgenes pre establecidos      *
+*              por cualquier navegador web.            *
+*******************************************************/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12em;
+    text-align: center;
+    margin: 250px auto;
+    text-transform: uppercase;
+    background: url("../img/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.prueba{
+    background-color: rgb(57.9%, 9.4%, 65.2%);
+}
