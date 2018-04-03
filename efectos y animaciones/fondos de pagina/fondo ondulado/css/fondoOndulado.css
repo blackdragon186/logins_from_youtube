@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*=============================================
+=  Estilos CSS para  fondoOndulado.html   =
+===============================================
+
+* NOTE: Hoja de estilos por medio de la cual se
+        crea un fondo de pág. con ondas.
+
+* @autor Ing. Moises Morales G.
+* @version 1.0.0
+* @since 02/04/2018
+* @see fondoOndulado.html
+* @see http://librosweb.es/referencia/css/
+* =============================================*/
+
+/****************
+*      NOTE     *
+********************************************************
+*         Se quitan los márgenes pre establecidos      *
+*              por cualquier navegador web.            *
+*******************************************************/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/** Color de fondo de toda  la página web. */
+body{
+    
+}
+
+/** Dimensiones de los contenedores */
+.size-section{
+    width: 100%;
+    min-height: 800px;
+}
+
+/** color de f8ondo de la primera sección */
+.olas{
+    position: absolute;
+    background: linear-gradient(90deg, #f0027f, #75489f);
+}
+
+/****************
+*      NOTE     *
+********************************************************
+*         Se cofloca la imagen de fondo,  esta  es     *
+*           la que contiene las ondulaciones.          *
+*******************************************************/
+.olas:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 215px;
+    background: url("../img/wave.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
