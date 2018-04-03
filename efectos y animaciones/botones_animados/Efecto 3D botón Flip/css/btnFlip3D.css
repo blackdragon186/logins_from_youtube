@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/*=============================================
+=  Estilos CSS para  btnFlip3D.html           =
+===============================================
+
+* NOTE: Hoja de estilos por medio de la cual se
+        se crea un botón con animación flip 3D.
+
+* @autor Ing. Moises Morales G.
+* @version 1.0.0
+* @since //2018
+* @see btnFlip3D.html
+* @see http://librosweb.es/referencia/css/
+* =============================================*/
+
+/****************
+*      NOTE     *
+********************************************************
+*         Se quitan los márgenes pre establecidos      *
+*              por cualquier navegador web.            *
+*******************************************************/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/** Color de fondo de toda  la página web. */
+body{
+    background: rgba(210, 205, 211, 100%);
+}
+
+/****************
+*      NOTE     *
+********************************************************
+*         Estilos para modificar la aparicencia        *
+*                  de  la etiqueta a.                  *
+*******************************************************/
+.caractA{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background: #ccc;
+}
+
+/****************
+*      NOTE     *
+********************************************************
+*         Dupicado de la primera etiqueta a      *
+*******************************************************/
+.caractA:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #ff005e;
+    color: #fff;
+    transition: 0.5s;
+    transform-origin: bottom;
+    transform: translateY(-100%) rotateX(90deg);
+}
+
+/****************
+*      NOTE     *
+********************************************************
+*         Bloque que realiza la transición del         *
+*                   efecto flip 3D.                    *
+**********************************************************************************************/
+.caractA:hover:before{
+    transform: translateY(0) rotateX(0deg);
+}
+
+.caractA:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #ea004f;
+    color: #fff;
+    transition: 0.5s;
+    transform-origin: top;
+    transform: translateY(0) rotateX(0deg);
+}
+
+.caractA:hover:after {
+    transform: translateY(100%) rotateX(90deg);
+}
+/****************************** Fin de Bloque efecto 3D*******************************************/
